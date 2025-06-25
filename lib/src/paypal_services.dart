@@ -13,7 +13,7 @@ class PaypalServices {
     required this.sandboxMode,
   });
 
-  getAccessToken() async {
+  Future<Map<String, dynamic>> getAccessToken() async {
     String domain = sandboxMode
         ? "https://api-m.sandbox.paypal.com"
         : "https://api.paypal.com";
